@@ -1,0 +1,88 @@
+:root {
+  --bleu: #18085c;
+  --white: #ffffff;
+  --gris: #efefef;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  color: var(--primary);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bg-bleu {
+  background-color: var(--bleu) !important;
+}
+
+.bg-white {
+  background-color: var(--white) !important;
+}
+
+.bg-gris {
+  background-color: var(--gris) !important;
+}
+
+.bg-mix {
+  background: linear-gradient(180deg, var(--white) 50%, var(--gris) 0);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: 0;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+}
+
+#sidebar-container {
+  min-height: 100vh;
+}
+
+#sidebar-container .logo {
+  padding: 0.875rem 1.1rem;
+}
+
+#sidebar-container .menu {
+  width: 16rem;
+}
+
+#content {
+  overflow-y: auto;
+  height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.avatar {
+  max-width: 35px;
+}
+
+.btn-search {
+  right: 0;
+}
+
+.stat {
+  border-right: 1px solid var(--gris);
+}
+
+@media (max-width: 768px) {
+  #sidebar-container {
+    display: none;
+  }
+  .stat {
+    border: 0;
+  }
+}
+img.imagen {
+  width: 90px;
+  height: 90px;
+}
+
+.naverr {
+  background: linear-gradient(to right, #18085c, #0098fd);
+}
