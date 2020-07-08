@@ -39,5 +39,5 @@
 
 
     <div class="footpage">
-    Copyright by Michael and Stiben &copy; <?=date("Y")?>
+    Copyright by Michael G. and Stiben T. &copy; <?=date("Y")?>
     </div>
