@@ -69,7 +69,6 @@ a:hover {
 .stat {
   border-right: 1px solid var(--gris);
 }
-
 @media (max-width: 768px) {
   #sidebar-container {
     display: none;
@@ -78,9 +77,27 @@ a:hover {
     border: 0;
   }
 }
-img.imagen {
-  width: 90px;
-  height: 90px;
+@media (max-width: 768px) {
+  div.logo-title {
+    display: none;
+  }
+  .stat {
+    border: 0;
+  }
+}
+@media (min-width: 768px) {
+  div.sidebar-hidden {
+    display: none;
+  }
+  .stat {
+    border: 0;
+  }
+}
+@media (max-width: 768px) {
+  img.imagene {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .naverr {
