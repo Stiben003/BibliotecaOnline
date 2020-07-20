@@ -15,9 +15,9 @@
 
 <div class="container-form">
         <div class="header">
-            <div class="logo-title">
+            <div class="logo-title d-block">
                 <img src="image/logo2.png" alt="">
-                <h2>Biblioteca Online</h2>
+                <h2 class="d-block">Biblioteca Online</h2>
             </div>
             <div class="menu">
                 <a href="login.php"><li class="module-login active">Login</li></a>

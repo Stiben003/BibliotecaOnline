@@ -13,7 +13,6 @@
 <body>
 
    <div class="welcome">
-     <!--  <img src="image/logo_magtimus.png" >-->
         <h1>Bienvenido, has logrado iniciar sesion</h1>
         <a href="cerrar.php">Cerrar sesion</a>
    </div>
