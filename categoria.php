@@ -22,7 +22,21 @@
 <body>
 
 
-<?php include "categoria.php"; ?>
+<?php include "header.php"; ?>
+
+<ul class="nav nav-tabs nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="categoria.php">Categoria</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="autor.php">Autor</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="editorial.php">Editorial</a>
+  </li>
+</ul>
+
+<?php include "footer.php"; ?>
 
 </body>
 </html>

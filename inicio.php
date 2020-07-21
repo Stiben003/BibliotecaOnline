@@ -24,7 +24,7 @@
 
 <?php include "header.php"; ?>
 <!-- Page Content -->
-<div class="container" style="overflow:scroll;">
+<div class="container">
 
   <!-- Page Heading -->
   <h1 class="my-4">Page Heading

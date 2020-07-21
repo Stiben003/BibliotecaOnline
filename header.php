@@ -18,7 +18,7 @@
 
         <a href="catalogo.php" class="d-block text-white p-3 border-0"><i class="icon ion-md-book lead mr-2"></i>
             Catalogo</a>
-        <a href="#" class="d-block text-white p-3 border-0"> <i class="icon ion-md-create lead mr-2"></i>
+        <a href="registro.php" class="d-block text-white p-3 border-0"> <i class="icon ion-md-create lead mr-2"></i>
             Registro</a>
         <a href="#" class="d-block text-white p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
             Reportes</a>
@@ -31,7 +31,7 @@
  <!-- Navbar -->
  <nav class="navbar navbar-expand navbar-dark naverr border-bottom py-2">
     <div class="container">
-    <button id="sidebarCollapse" class="bg-bleu"><span class="navbar-toggler-icon"></span></button>
+      <button id="sidebarCollapse" class="bg-bleu"><span class="navbar-toggler-icon"></span></button>
       <div class="sidebar-hidden">
       <img class="imagene img-fluid d-inline-block" src="image/logo2.png" alt="">
       <h4 class="text-white font-weight-bold d-inline-block mb-0"> Biblioteca</h4>
