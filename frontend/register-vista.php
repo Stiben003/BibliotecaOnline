@@ -17,7 +17,7 @@
         <div class="header">
             <div class="logo-title">
                 <img src="image/logo2.png" alt="">
-                <h2>Biblioteca Online</h2>
+                <h2>Biblioteca</h2>
             </div>
             <div class="menu">
                 <a href="login.php"><li class="module-login">Login</li></a>

@@ -87,6 +87,13 @@ a:hover {
     width: 50px;
     height: 50px;
   }
+  #sidebar-container {
+    margin-left: -250px;
+  }
+
+  #sidebar-container.active {
+    margin-left: 0;
+  }
 }
 @media (min-width: 768px) {
   img.imagen {
