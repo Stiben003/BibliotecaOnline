@@ -31,6 +31,9 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+  --bleu: #18085c;
+  --white: #ffffff;
+  --gris: #efefef;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -489,6 +492,13 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.containerbody {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 75px;
+  margin-left: 75px;
 }
 @media (min-width: 576px) {
   .container {

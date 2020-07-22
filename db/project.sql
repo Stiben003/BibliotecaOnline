@@ -7,7 +7,7 @@
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 5.6.31
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `project`
+-- Base de datos: `tuto_login`
 --
 
 -- --------------------------------------------------------
@@ -40,6 +40,15 @@ CREATE TABLE IF NOT EXISTS `login` (
 --
 -- Volcado de datos para la tabla `login`
 --
+-- Estructura de tabla para la tabla `categoria`
+--
+
+DROP TABLE IF EXISTS `categoria`;
+CREATE TABLE IF NOT EXISTS `categoria` (
+  `idcategoria` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcioncat` varchar(100) NOT NULL,
+  UNIQUE KEY `idcategoria` (`idcategoria`)
+) ENGINE=MEMORY AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 
 

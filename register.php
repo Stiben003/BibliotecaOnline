@@ -23,11 +23,11 @@
             $error .= '<i>Favor de rellenar todos los campos</i>';
         }else{
             try{
-                $conexion = new PDO('mysql:host=localhost;dbname=login_tuto', 'root', '');
-            }catch(PDOException $prueba_error){
-                echo "Error: " . $prueba_error->getMessage();
-            }
-            
+                $conexion = new PDO('mysql:host=localhost;dbname=project', 'root', '');
+           }catch(PDOException $prueba_error){
+               echo "Error: " . $prueba_error->getMessage();
+           }
+       
             $statement = $conexion->prepare('SELECT * FROM login WHERE usuario = :usuario LIMIT 1');
             $statement->execute(array(':usuario' => $usuario));
             $resultado = $statement->fetch();

@@ -18,7 +18,7 @@
 
         <a href="catalogo.php" class="d-block text-white p-3 border-0"><i class="icon ion-md-book lead mr-2"></i>
             Catalogo</a>
-        <a href="registro.php" class="d-block text-white p-3 border-0"> <i class="icon ion-md-create lead mr-2"></i>
+        <a href="categoria.php" class="d-block text-white p-3 border-0"> <i class="icon ion-md-create lead mr-2"></i>
             Registro</a>
         <a href="#" class="d-block text-white p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
             Reportes</a>
