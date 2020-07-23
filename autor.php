@@ -38,6 +38,41 @@
   </ul> 
 </div>
 
+<div class="container">
+              <div class="container-flat-form">
+                  <div class="title-flat-form title-flat-blue">Agregar un nuevo autor</div>
+                      <div class="container">
+                        <div class="col-xs-12 m-5 col-sm-offset-2">
+                        <form autocomplete="off" method="POST">
+                              <div class="group-material">
+                                  <input type="text" class="material-control" placeholder="Escribe aquí el nombre del autor" required=""  maxlength="50" data-placement="top" title="Escribe el nombre de la categoría" name="autor">
+                                  <span class="highlight"></span>
+                                  <span class="bar"></span>
+                                  <label>Nombre</label>
+                              </div>
+                              <p class="text-center">
+                                  <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
+                                  <button type="submit" name="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                              </p> 
+                          </form>
+                        </div>
+                      </div>
+              </div>
+          </div>
+          <?php
+            if (isset($_POST['submit'])){
+              include("connect.php");
+              $autor = $_POST["autor"];
+              $query = mysqli_query($conexion, "SELECT * FROM autor WHERE desc_autor= '$autor'");
+              if (mysqli_num_rows($query) > 0){
+                echo "Este registro ya existe.";
+                }else{
+                $insertar = "INSERT INTO autor (desc_autor) VALUES ('$autor')";
+                $consultar = mysqli_query($conexion, $insertar);
+              }
+              
+            }
+          ?>
 
 <?php include "footer.php"; ?>
 

@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `usuario` varchar(100) NOT NULL,
   `clave` varchar(200) NOT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=MEMORY AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MEMORY AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `login`
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `idcategoria` int(11) NOT NULL AUTO_INCREMENT,
   `descripcioncat` varchar(100) NOT NULL,
   UNIQUE KEY `idcategoria` (`idcategoria`)
-) ENGINE=MEMORY AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MEMORY AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
 
 

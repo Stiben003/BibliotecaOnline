@@ -22,18 +22,20 @@
 
 
   <?php include "header.php"; ?>
-
-  <ul class="nav nav-tabs nav-fill">
-    <li class="nav-item">
-      <a class="nav-link active" href="categoria.php">Categoria</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="autor.php">Autor</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="editorial.php">Editorial</a>
-    </li>
-  </ul>
+  <div class="container">
+    <ul class="nav nav-tabs nav-fill m-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="categoria.php">Categoria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="autor.php">Autor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="editorial.php">Editorial</a>
+      </li>
+    </ul>
+  </div>
+  
 
   <div class="container">
               <div class="container-flat-form">
@@ -60,8 +62,14 @@
             if (isset($_POST['submit'])){
               include("connect.php");
               $categoria = $_POST["nomcategoria"];
-              $insertar = "INSERT INTO `categoria`(`descripcion`) VALUES ([$categoria])";
-              $query = mysqli_query($conexion, $insertar);
+              $query = mysqli_query($conexion, "SELECT * FROM categoria WHERE descripcion= '$categoria'");
+              if (mysqli_num_rows($query) > 0){
+                echo "Este registro ya existe.";
+                }else{
+                $insertar = "INSERT INTO categoria (descripcion) VALUES ('$categoria')";
+                $consultar = mysqli_query($conexion, $insertar);
+              }
+              
             }
           ?>
       <div class="footpage">
