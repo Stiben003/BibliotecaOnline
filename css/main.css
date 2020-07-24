@@ -4,8 +4,15 @@
   --gris: #efefef;
 }
 
+.tpm {
+  position: absolute;
+  margin-left: 270px;
+  top: 10%;
+  width: 75%;
+  overflow: auto;
+}
+
 body {
-  overflow: hidden;
   font-family: "Muli", sans-serif;
   font-weight: 300;
   color: var(--primary);
@@ -48,8 +55,13 @@ a:hover {
   min-width: 250px;
   max-width: 250px;
   background: #18085c;
+  flex: 1;
   color: #fff;
   transition: all 0.3s;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+  border-top: 0px;
 }
 
 #sidebar-container .logo {
@@ -58,12 +70,6 @@ a:hover {
 
 #sidebar-container .menu {
   width: 16rem;
-}
-
-#content {
-  overflow-y: auto;
-  height: 100vh;
-  padding-bottom: 5rem;
 }
 
 @media (max-width: 768px) {

@@ -3,7 +3,7 @@
 <div class="d-flex" id="content-wrapper">
 
 <!-- Sidebar -->
-<div id="sidebar-container" class="bg-bleu">
+<div id="sidebar-container" class="bg-bleu bd-sidebar">
     <div class="logo-title m-2">
     <img class="imagen d-inline-block" src="image/logo2.png" alt="">
         <h3 class="text-white font-weight-bold d-inline-block m-2"> Biblioteca</h3>

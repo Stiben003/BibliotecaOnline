@@ -34,7 +34,7 @@
                         <form autocomplete="off" method="post">
                             <div class="group-material">
                                 <span>Categoría</span>
-                                <select class="tooltips-general material-control" data-toggle="tooltip" data-placement="top" title="Elige la categoría del libro"> 
+                                <select class="tooltips-general material-control" data-toggle="tooltip" data-placement="top" title="Elige la categoría del libro" name="categoria"> 
                                     <?php while($categoria = mysqli_fetch_array($result))
                                     {
                                     ?>
@@ -45,8 +45,13 @@
                                    
                                 </select>
                             </div>
+                            <p class="text-center">
+                                  <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
+                                  <button type="submit" name="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                              </p> 
                            
                         </form>
+  
                     </div>
                 </div>
             </div>
