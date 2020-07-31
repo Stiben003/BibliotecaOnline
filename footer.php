@@ -1,6 +1,9 @@
 
+    <div class="footpage">
+    Copyright by Michael G. and Stiben T. &copy; <?=date("Y")?>
+    </div>
+    </div>
         <script src="librerias/jquery.slim.min.js"></script>
-        <script src="js/hitgoalz.js"></script>
         <script src="librerias/bootstrap4/popper.min.js"></script>
         <script src="librerias/bootstrap4/bootstrap.min.js"></script>
         <script src="librerias/datatable/jquery.dataTables.min.js"></script>
@@ -9,12 +12,10 @@
         <script>
             $(document).ready(function () {
                 $("#sidebarCollapse").on("click", function () {
-                $("#sidebar-container").toggleClass("active");
+                $("#sidebar, #content, #nav-content").toggleClass("active");
                 });
             });
+
     </script>
 
 
-    <div class="footpage">
-    Copyright by Michael G. and Stiben T. &copy; <?=date("Y")?>
-    </div>

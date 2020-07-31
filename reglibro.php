@@ -11,15 +11,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registrar Libro</title>
         <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./librerias/bootstrap4/bootstrap.min.css">
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="./librerias/bootstrap4/bootstrap.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-        <!-- Google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
 
-        <!-- Ionic icons -->
-        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-        <link href="/docs/4.5/assets/css/docs.min.css" rel="stylesheet">
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+     <!-- Font Awesome JS -->
+     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     </head>
     <body>
@@ -30,11 +37,24 @@
                 <div class="title-flat-form title-flat-blue">Nuevo libro</div>
                 <div class="container">
                     <div class="col-xs-12 m-5 col-sm-offset-2">
-                        <legend><strong>Información básica</strong></legend><br>
                         <form autocomplete="off" method="post">
+                                <div class="group-material">
+                                    <input type="text" class="material-control" placeholder="Escribe el titulo aquí" required=""  maxlength="100" data-placement="top" title="Escribe el titulo" name="titulo">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Titulo</label>
+                                </div>
+                                <div class="group-material">
+                                    <input type="text" class="material-control" placeholder="Escribe el ISBN aquí" required=""  maxlength="100" data-placement="top" title="Escribe el ISBN" name="titulo">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>ISBN</label>
+                                </div>
                             <div class="group-material">
                                 <span>Categoría</span>
                                 <select class="tooltips-general material-control" data-toggle="tooltip" data-placement="top" title="Elige la categoría del libro" name="categoria"> 
+                                <span class="highlight"></span>
+                                  <span class="bar"></span>
                                     <?php while($categoria = mysqli_fetch_array($result))
                                     {
                                     ?>
