@@ -33,7 +33,7 @@ $query = extraerAutor(base64_decode($_GET['id']));
 $row = $query->fetch_assoc();
 ?>
 
-<div class="container">
+<div class="container"> 
     <ul class="nav nav-tabs nav-fill m-3">
       <li class="nav-item">
         <a class="nav-link" href="categoria.php">Categoria</a>

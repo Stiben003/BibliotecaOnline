@@ -21,7 +21,7 @@
             >
             <ul class="collapse list-unstyled" id="homeSubmenu">
               <li class="nav-item">
-                <a href="catalogo.php" class="nav-link d-block text-white p-3 border-0"
+                <a href="manage-books.php" class="nav-link d-block text-white p-3 border-0"
                   ><i class="icon ion-md-book lead mr-2"></i> Catalogo</a
                 >
               </li>
