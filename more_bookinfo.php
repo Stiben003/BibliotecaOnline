@@ -48,7 +48,10 @@
             <div class="container">
             <table class="table table-hover table-bordered">
         <tbody>            
-            <tr><td><strong>Portada</strong></td><td><img height="200px" src="data:image/jpg;base64,<?php echo base64_encode($row['portada']); ?>" /></td></tr>
+            <tr><td><strong>Portada</strong></td><td><img height="200px" src="data:image/jpg;base64,<?php echo base64_encode($row['portada']); ?>" />
+            
+            <a class="button" href="data:application/pdf;base64,<?php echo base64_encode($row['pdflibro']); ?>" download="<?php echo $row['titulo']; ?>">Descargar Archivo</a>
+</td></tr>
             <tr><td><strong>Titulo</strong></td><td><?php echo $row['titulo']; ?></td></tr>
             <tr><td><strong>Autor</strong></td><td><?php echo $row['autor']; ?></td></tr>
             <tr><td><strong>Categoria</strong></td><td><?php echo $row['categoria']; ?></td></tr>

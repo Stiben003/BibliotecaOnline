@@ -14,9 +14,9 @@ if (isset($_GET['id'])) {
 
 if ($i == 'DLT') {    
     $sql="
-    UPDATE `editorial` SET
+    UPDATE `libro` SET
     `estado` = 'I'
-    WHERE `ideditorial` = '$codigo'
+    WHERE `idlibro` = '$codigo'
     ";
 
     if ($conexion->query($sql)) {
@@ -30,18 +30,16 @@ if ($i == 'DLT') {
 
 if ($i == 'UDT'){
     $msj='';
-    $titulo     =$_POST['titulo'];
-    $isbn       =$_POST['isbn'];
+    $titulo=$_POST['titulo'];
+    $isbn=$_POST['isbn'];
     $descripcion=$_POST['descripcion'];
-    $year       =$_POST['year'];
-    $categoria  =$_POST['categoria'];
-    $autor      =$_POST['autor'];
-    $editorial  =$_POST['editorial'];
-    $estado     = $_POST['estado'];
-    $portada = addslashes(file_get_contents($_FILES['portada']['tmp_name']));
-    $archivo = addslashes(file_get_contents($_FILES['archivo']['tmp_name']));
+    $year=$_POST['year'];
+    $categoria=$_POST['categoria'];
+    $autor=$_POST['autor'];
+    $editorial=$_POST['editorial'];
+    $estado= $_POST['estado'];
     $sql="
-    UPDATE `libro` 
+    UPDATE libro 
     SET 
     
     `titulo` ='$titulo',
@@ -51,8 +49,6 @@ if ($i == 'UDT'){
     `autor` ='$autor',
     `categoria`='$categoria',
     `editorial` ='$editorial',
-    `portada`='$portada',
-    `pdflibro` ='$archivo',
     `estado` ='$estado'
     WHERE idlibro = '$codigo'
     ";

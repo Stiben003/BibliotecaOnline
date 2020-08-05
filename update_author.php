@@ -58,7 +58,7 @@ $row = $query->fetch_assoc();
                         <input type="text" name="codigo" id="codigo" require="" readonly="" class="form-control" value="<?php echo $row['idautor'] ?>">
                     </div>
                     <div class="form-group">
-                        <label>Nombre de la categoría <span style="color:red">*</span></label>
+                        <label>Nombre del Autor <span style="color:red">*</span></label>
                         <input class="form-control" type="text" name="descripcion" required value="<?php echo $row['desc_autor'] ?>">
                     </div>
                     <div class="form-group">

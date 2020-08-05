@@ -1,11 +1,11 @@
 <?php
     include 'connect.php';
     $query = "SELECT * FROM categoria";
-    $result = mysqli_query($conexion, $query);
+    $rescategoria = mysqli_query($conexion, $query);
     $query2 = "SELECT * FROM autor";
-    $result2 = mysqli_query($conexion, $query2);
+    $resautor = mysqli_query($conexion, $query2);
     $query3 = "SELECT * FROM editorial";
-    $result3 = mysqli_query($conexion, $query3);
+    $reseditorial = mysqli_query($conexion, $query3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Titulo <span style="color:red">*</span></label>
-                        <input class="form-control" type="text" name="titulo" autocomplete="off" required value="<?php echo $row['titulo'] ?>">
+                        <input class="form-control" type="text" name="titulo" required value="<?php echo $row['titulo'] ?>">
                     </div>
                     <div class="form-group">
                         <label class="control-label">Estado <span style="color:red">*</span></label>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">ISBN <span style="color:red">*</span></label>
-                        <input class="form-control" type="text" name="isbn" autocomplete="off" required value="<?php echo $row['isbn'] ?>">
+                        <input class="form-control" type="text" name="isbn" required value="<?php echo $row['isbn'] ?>">
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-lg-12 col-lg-offset-2 col-xs-12 col-xs-offset-0">
@@ -81,9 +81,8 @@
                     <div class="form-group">
                         <label class="control-label">Categoria <span style="color:red">*</span></label>
                         <select class="form-control" name="categoria" required>
-                            <option selected="true" disabled="disabled">Seleccionar una...</option>
-                            <?php while($categoria = mysqli_fetch_array($result))
-                            
+                            <option disabled="disabled">Seleccionar una...</option>
+                            <?php while($categoria = mysqli_fetch_array($rescategoria))
                                 {
                             ?>
                             <option value="<?php echo $categoria['descripcion']?>"> <?php echo $categoria['descripcion']?> </option>
@@ -95,8 +94,8 @@
                     <div class="form-group">
                         <label class="control-label">Autor <span style="color:red">*</span></label>
                         <select class="form-control" name="autor" required>
-                            <option selected="true" disabled="disabled">Seleccionar una...</option>
-                            <?php while($autor = mysqli_fetch_array($result2))
+                            <option disabled="disabled">Seleccionar una...</option>
+                            <?php while($autor = mysqli_fetch_array($resautor))
                             
                                 {
                             ?>
@@ -109,8 +108,8 @@
                     <div class="form-group">
                         <label class="control-label">Editorial <span style="color:red">*</span></label>
                         <select class="form-control" name="editorial" required>
-                            <option selected="true" disabled="disabled">Seleccionar una...</option>
-                            <?php while($editorial = mysqli_fetch_array($result3))
+                            <option disabled="disabled">Seleccionar una...</option>
+                            <?php while($editorial = mysqli_fetch_array($reseditorial))
                             
                                 {
                             ?>
@@ -119,17 +118,6 @@
                                 }
                             ?>
                         </select>
-                    </div>
-                    <div class="row mx-2">
-                            <div class="form-group">
-                                <label for="portada">Portada</label><br/>
-                                <img height="100px" src="data:image/jpg;base64,<?php echo base64_encode($row['portada']); ?>" />
-                                <input type="file" name="portada" class="form-control-file" id="portada" accept="image/*">
-                            </div>
-                            <div class="form-group">
-                                <label for="archpdf">Archivo PDF</label>
-                                <input type="file" name="archivo" class="form-control-file" id="archpdf" accept="application/pdf">
-                            </div>
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-lg-6 col-offset-2 col-xs-12 col-xs-offset-0">

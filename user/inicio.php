@@ -2,10 +2,10 @@
     session_start();
 
     if (!isset($_SESSION['rol'])) {
-        header('location: index.php');
+        header('location: ../index.php');
     }else{
-        if($_SESSION['rol'] !=1){
-            header('location: index.php');
+        if($_SESSION['rol'] !=2){
+            header('location: ../index.php');
         }
     }
 
@@ -18,8 +18,8 @@
     <title>Biblioteca Online</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./librerias/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../librerias/bootstrap4/bootstrap.min.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!-- Google fonts -->

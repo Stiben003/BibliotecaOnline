@@ -62,7 +62,7 @@ if ($i == 'INS'){
             `desc_autor`, 
             `estado`
         ) VALUES (
-            '$descripcion',
+            '$nombre',
             'A'
         ) 
     ";

@@ -32,13 +32,13 @@
   <div class="container">
     <ul class="nav nav-tabs nav-fill m-3">
       <li class="nav-item">
-        <a class="nav-link active" href="categoria.php">Categoria</a>
+        <a class="nav-link active" href="addcategory.php">Categoria</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="autor.php">Autor</a>
+        <a class="nav-link" href="addauthor.php">Autor</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="editorial.php">Editorial</a>
+        <a class="nav-link" href="addeditorial.php">Editorial</a>
       </li>
     </ul>
   </div>

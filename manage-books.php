@@ -71,7 +71,7 @@
 <!-- Inicio de Panel de Detalles -->
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h1>Listado de Autores</h1>
+        <h1>Listado de Libros</h1>
     </div>
     <div class="panel-body">
     <br>
