@@ -92,7 +92,7 @@
                     <div class="form-group">
                         <label class="control-label">Editorial <span style="color:red">*</span></label>
                         <select class="form-control" name="editorial">
-                            <option selected="true" disabled="disabled">Seleccionar una...</option>
+                            <option selected="true" disabled="disabled">Seleccionar una editorial...</option>
                             <?php while($editorial = mysqli_fetch_array($result3))
                             
                                 {

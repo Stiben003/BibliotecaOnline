@@ -52,7 +52,7 @@
                 <form action="php/registros-crud/author.php?accion=INS" method="post">
                     <div class="form-group">
                     <label>Nombre del autor</label>
-                    <input class="form-control" type="text" name="nombre" autocomplete="off" required />
+                    <input class="form-control" type="text" placeholder="Ingrese el Nombre del Autor" name="nombre" autocomplete="off" required />
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-lg-8 col-offset-2 col-xs-12 col-xs-offset-0">
