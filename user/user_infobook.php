@@ -6,8 +6,8 @@
       <title>Biblioteca Online</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./librerias/bootstrap4/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../librerias/bootstrap4/bootstrap.min.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!-- Google fonts -->
@@ -27,7 +27,7 @@
   </head>
   <body>
   <?php include "header.php";
-  include 'php/consultas.php';
+  include '../php/consultasuser.php';
   $sql = extraerLibros(base64_decode($_GET['id']));
   $row = $sql->fetch_assoc();
   ?>
@@ -45,7 +45,6 @@
                   <tr><td><strong>Categoria</strong></td><td><?php echo $row['categoria']; ?></td></tr>
                   <tr><td><strong>Año</strong></td><td><?php echo $row['year']; ?></td></tr>
                   <tr><td><strong>Editorial</strong></td><td><?php echo $row['editorial']; ?></td></tr>
-                  <tr><td><strong>Estado</strong></td><td><?php echo $row['estado']; ?></td></tr>
 
               </tbody>
         </table>
@@ -62,7 +61,7 @@
       </div>
     <div class="row d-flex flex-row justify-content-center align-items-center">
             <div class="form-group">
-                <a type="button" href="manage-books.php" class="btn btn-primary btn-lg">Atras</a>
+                <a type="button" href="catalogo.php" class="btn btn-primary btn-lg">Atras</a>
                 <a type="button" href="data:application/pdf;base64,<?php echo base64_encode($row['pdflibro']); ?>" class="btn btn-secondary btn-lg" download="<?php echo $row['titulo']; ?>"> Descargar Libro</a>
               </div>
     </div>

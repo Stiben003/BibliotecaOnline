@@ -2,7 +2,7 @@
       <!-- Sidebar  -->
       <nav id="sidebar" class="bg-bleu">
         <div class="sidebar-header">
-            <img src="image/logo2.png" alt="Logo"><h3>Biblioteca Virtual</h3>
+            <a href="inicio.php" class="nav-link text-white"><img src="image/logo2.png" alt="Logo"><h3>Biblioteca Virtual</h3></a>
         </div>
 
         <ul class="list-unstyled components">
@@ -13,21 +13,21 @@
           </li>
           <li class="nav-item">
             <a
-              href="#homeSubmenu"
+              href="#catalogo"
               data-toggle="collapse"
               aria-expanded="false"
               class="dropdown-toggle nav-link d-block text-white p-3 border-0"
               >Libros y Catalogo</a
             >
-            <ul class="collapse list-unstyled" id="homeSubmenu">
+            <ul class="collapse list-unstyled" id="catalogo">
               <li class="nav-item">
                 <a href="manage-books.php" class="nav-link d-block text-white p-3 border-0"
-                  ><i class="icon ion-md-book lead mr-2"></i> Catalogo</a
+                  ><i class="icon ion-md-book lead mr-2"></i> Listado de Libros</a
                 >
               </li>
               <li class="nav-item">
                 <a href="reglibro.php" class="nav-link d-block text-white p-3 border-0"
-                  ><i class="icon ion-md-book lead mr-2"></i> Libros</a
+                  ><i class="icon ion-md-book lead mr-2"></i>Agregar Libros</a
                 >
               </li>
             </ul>
@@ -38,17 +38,23 @@
               data-toggle="collapse"
               aria-expanded="false"
               class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Categoria</a
+              >Administrar</a
             >
             <ul class="collapse list-unstyled" id="categoria">
               <li class="nav-item">
-                <a href="addcategory.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Agregar categoria</a
+                <a href="manage-categories.php" class="nav-link d-block text-white p-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Administrar categorias</a
+                >
+              </li>
+              
+              <li class="nav-item">
+                <a href="manage-authors.php" class="nav-link d-block text-white p-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Administrar autores</a
                 >
               </li>
               <li class="nav-item">
-                <a href="manage-categories.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Administrar categorias</a
+                <a href="manage-editorials.php" class="nav-link d-block text-white p-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Administrar editoriales</a
                 >
               </li>
             </ul>
@@ -59,40 +65,25 @@
               data-toggle="collapse"
               aria-expanded="false"
               class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Autor</a
+              >Registros</a
             >
             <ul class="collapse list-unstyled" id="autor">
+              <li class="nav-item">
+                <a href="addcategory.php" class="nav-link d-block text-white p-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Agregar categoria</a
+                >
+              </li>
               <li class="nav-item">
                 <a href="addauthor.php" class="nav-link d-block text-white p-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Agregar autor</a
                 >
               </li>
               <li class="nav-item">
-                <a href="manage-authors.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Administrar autores</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              href="#editorial"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Editorial</a
-            >
-            <ul class="collapse list-unstyled" id="editorial">
-              <li class="nav-item">
                 <a href="addeditorial.php" class="nav-link d-block text-white p-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Agregar editorial</a
                 >
               </li>
-              <li class="nav-item">
-                <a href="manage-editorials.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Administrar editoriales</a
-                >
-              </li>
+              
             </ul>
           </li>
           <li class="nav-item">
@@ -109,31 +100,17 @@
               <i id="boton" class="fas fa-align-left"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdowm">
                   <a
-                    class="nav-link text-white dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="true"
-                  >
-                    Usuario
+                    class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Administrador
                   </a>
-                  <div
-                    class="dropdown-menu dropdown-menu-right"
-                    aria-labelledby="navbarDropdown"
-                  >
-                    <a class="dropdown-item" href="#">Mi perfil</a>
-                    <div class="dropdown-divider"></div>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="cerrar.php">Cerrar sesión</a>
                   </div>
                 </li>
+                
               </ul>
-            </div>
           </div>
         </nav></div>
       <!-- Page Content  -->

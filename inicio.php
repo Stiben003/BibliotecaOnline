@@ -40,127 +40,42 @@
 <body>
 
 
-<?php include "header.php"; ?>
-      <!-- Page Content -->
-      <div class="container">
-          <!-- Page Heading -->
-          <h1 class="my-4">
-            Page Heading
-            <small>Secondary Text</small>
-          </h1>
+<?php 
+    include "header.php"; 
+    include "./connect.php";
+    $selectUsuario=$conexion->query("SELECT COUNT(id) FROM `login` where rol_id = 2;"); 
+    $row = mysqli_fetch_array($selectUsuario);    
+    $selectLibro=$conexion->query("SELECT COUNT(idlibro) FROM `libro`;"); 
+    $row1 = mysqli_fetch_array($selectLibro);   
 
-          <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="catalogo.php"
-                  ><img class="card-img-top" src="image/book.jpg" alt=""
-                /></a>
+    
+?>
+<section class="py-3">
+    <h1 class="my-4">Pagina Principal</h1>
+        <div class="container my-5">
+            
+            <div class="card rounded-0">
                 <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="catalogo.php">Project One</a>
-                  </h4>
-                  <p class="card-text">
-                    LVoluptatibus sit, repellat sequi itaque deserunt, dolores
-                    in, nesciunt, illum tempora ex quae? Nihil, dolorem!
-                  </p>
+                    <div class="row d-flex flex-row justify-content-center align-items-center">
+                        <div class="col-lg-3 col-md-6 d-flex my-3">
+                            <div class="mx-auto">
+                                <h5 class="text-muted">Usuarios</h5>
+                                <h2 class="font-weight-bold"><?php echo $row[0]; ?></h2>
+                                <h6 class="text-success">Registrados</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 d-flex my-3">
+                            <div class="mx-auto">
+                                <h5 class="text-muted">Libros</h5>
+                                <h2 class="font-weight-bold"><?php echo $row1[0]; ?></h2>
+                                <h6 class="text-success">Registrados</h6>
+                            </div>
+                          </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Two</a>
-                  </h4>
-                  <p class="card-text">itae.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Three</a>
-                  </h4>
-                  <p class="card-text">
-                    umque, odio distinctio velit nostrum temporibus
-                    necessitatibus et facere atque iure perspiciatis mollitia
-                    recusandae vero vel quam!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Four</a>
-                  </h4>
-                  <p class="card-text">
-                    euismod odio, gravida pellentesque urna varius vitae.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Five</a>
-                  </h4>
-                  <p class="card-text">
-                    iverra euismod odio, gravida pellentesque urna varius vitae.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Six</a>
-                  </h4>
-                  <p class="card-text">
-                    perferendis rem illo, voluptate atque, sit eius in
-                    voluptates, nemo repellat fugiat excepturi! Nemo, esse.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.row -->
         </div>
-        <!-- /.container -->
+      </section>
 
 
 <?php include "footer.php"; ?>

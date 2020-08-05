@@ -2,7 +2,7 @@
       <!-- Sidebar  -->
       <nav id="sidebar" class="bg-bleu">
         <div class="sidebar-header">
-            <img src="image/logo2.png" alt="Logo"><h3>Biblioteca Virtual</h3>
+            <img src="../image/logo2.png" alt="Logo"><h3>Biblioteca Virtual</h3>
         </div>
 
         <ul class="list-unstyled components">
@@ -12,94 +12,12 @@
             >
           </li>
           <li class="nav-item">
-            <a
-              href="#homeSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Libros y Catalogo</a
-            >
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-              <li class="nav-item">
-                <a href="manage-books.php" class="nav-link d-block text-white p-3 border-0"
-                  ><i class="icon ion-md-book lead mr-2"></i> Catalogo</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="reglibro.php" class="nav-link d-block text-white p-3 border-0"
-                  ><i class="icon ion-md-book lead mr-2"></i> Libros</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              href="#categoria"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Categoria</a
-            >
-            <ul class="collapse list-unstyled" id="categoria">
-              <li class="nav-item">
-                <a href="addcategory.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Agregar categoria</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="manage-categories.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Administrar categorias</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              href="#autor"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Autor</a
-            >
-            <ul class="collapse list-unstyled" id="autor">
-              <li class="nav-item">
-                <a href="addauthor.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Agregar autor</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="manage-authors.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Administrar autores</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              href="#editorial"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
-              >Editorial</a
-            >
-            <ul class="collapse list-unstyled" id="editorial">
-              <li class="nav-item">
-                <a href="addeditorial.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Agregar editorial</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="manage-editorials.php" class="nav-link d-block text-white p-3 border-0">
-                  <i class="icon ion-md-create lead mr-2"></i> Administrar editoriales</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link d-block text-white p-3 border-0">
-              <i class="icon ion-md-settings lead mr-2"></i> Reportes</a
+            <a href="catalogo.php" class="nav-link d-block text-white p-3 border-0"
+              ><i class="icon ion-md-home lead mr-2"></i> Catalogo</a
             >
           </li>
+          
+          
         </ul>
       </nav>
       <div id="nav-content">

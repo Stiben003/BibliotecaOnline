@@ -20,7 +20,7 @@
                 <h2>Biblioteca</h2>
             </div>
             <div class="menu">
-                <a href="login.php"><li class="module-login">Login</li></a>
+                <a href="index.php"><li class="module-login">Login</li></a>
                 <a href="register.php"><li class="module-register active">Register</li></a>
             </div>
         </div>

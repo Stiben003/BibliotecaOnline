@@ -45,19 +45,18 @@
       <div class="container">
           <!-- Page Heading -->
           <h1 class="my-4">
-            Page Heading
-            <small>Secondary Text</small>
+            Pagina Principal
           </h1>
 
           <div class="row">
             <div class="col-lg-4 col-sm-6 mb-4">
               <div class="card h-100">
                 <a href="catalogo.php"
-                  ><img class="card-img-top" src="image/book.jpg" alt=""
+                  ><img class="card-img-top" src="../image/book.jpg" alt=""
                 /></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="catalogo.php">Project One</a>
+                    <a href="catalogo.php">Los beneficios de la lectura</a>
                   </h4>
                   <p class="card-text">
                     LVoluptatibus sit, repellat sequi itaque deserunt, dolores

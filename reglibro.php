@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php';
+    include './connect.php';
     $query = "SELECT * FROM categoria";
     $result = mysqli_query($conexion, $query);
     $query2 = "SELECT * FROM autor";
@@ -44,30 +44,29 @@
                 <form action="php/registros-crud/book.php?accion=INS" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="control-label">Titulo <span style="color:red">*</span></label>
-                        <input class="form-control" type="text" name="titulo" autocomplete="off" required />
+                        <input class="form-control" type="text" placeholder="Ingrese el titulo del Libro" name="titulo" autocomplete="off" required />
                     </div>
                     <div class="form-group">
                         <label class="control-label">ISBN <span style="color:red">*</span></label>
-                        <input class="form-control" type="text" name="isbn" autocomplete="off" required />
+                        <input class="form-control" type="text" placeholder="Ingrese el ISBN" name="isbn" autocomplete="off" required />
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-lg-12 col-lg-offset-2 col-xs-12 col-xs-offset-0">
                             <div class="form-group">
                                 <label class="control-label">Descripcion <span style="color:red">*</span></label>
-                                <textarea class="form-control" name="descripcion" id="descripcion"></textarea>
+                                <textarea class="form-control" name="descripcion" placeholder="Ingrese la Descripcion" id="descripcion"></textarea>
                             </div>
                         </div>                     
                     </div>
                     <div class="form-group">
                         <label class="control-label">Año <span style="color:red">*</span></label>
-                        <input class="form-control" type="number" name="year" min="1900" required />
+                        <input class="form-control" type="number" placeholder="Ingrese el Año de publicacion" name="year" min="1900" required />
                     </div>
                     <div class="form-group">
                         <label class="control-label">Categoria <span style="color:red">*</span></label>
                         <select class="form-control" name="categoria">
-                            <option selected="true" disabled="disabled">Seleccionar una...</option>
+                            <option selected="true" disabled="disabled">Seleccionar una categoria...</option>
                             <?php while($categoria = mysqli_fetch_array($result))
-                            
                                 {
                             ?>
                             <option value="<?php echo $categoria['descripcion']?>"> <?php echo $categoria['descripcion']?> </option>
@@ -79,7 +78,7 @@
                     <div class="form-group">
                         <label class="control-label">Autor <span style="color:red">*</span></label>
                         <select class="form-control" name="autor">
-                            <option selected="true" disabled="disabled">Seleccionar una...</option>
+                            <option selected="true" disabled="disabled">Seleccionar un autor...</option>
                             <?php while($autor = mysqli_fetch_array($result2))
                             
                                 {

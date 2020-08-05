@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php';
+    include './connect.php';
     $query = "SELECT * FROM categoria";
     $rescategoria = mysqli_query($conexion, $query);
     $query2 = "SELECT * FROM autor";
@@ -43,7 +43,7 @@
 
 <div class="container">
     <div class="container-flat-form">
-        <div class="title-flat-form title-flat-blue">Agregar un nuevo Libro</div>
+        <div class="title-flat-form title-flat-blue">Actualizar Libro</div>
         <div class="panel panel-default">
             <div class="container">
                 <form action="php/registros-crud/book.php?accion=UDT" method="post" enctype="multipart/form-data">

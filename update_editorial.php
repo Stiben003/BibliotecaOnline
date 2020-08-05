@@ -28,7 +28,7 @@
 <body>
 <?php
 include 'header.php';
-include 'php/consultas.php';
+include './php/consultas.php';
 $query = extraerEditorial(base64_decode($_GET['id']));
 $row = $query->fetch_assoc();
 ?>
@@ -36,13 +36,13 @@ $row = $query->fetch_assoc();
 <div class="container">
     <ul class="nav nav-tabs nav-fill m-3">
       <li class="nav-item">
-        <a class="nav-link" href="categoria.php">Categoria</a>
+        <a class="nav-link" href="addcategory.php">Categoria</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="autor.php">Autor</a>
+        <a class="nav-link active" href="addauthor.php">Autor</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="editorial.php">Editorial</a>
+        <a class="nav-link" href="addeditorial.php">Editorial</a>
       </li>
     </ul>
   </div>
