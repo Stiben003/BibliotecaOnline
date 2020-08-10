@@ -2,10 +2,15 @@
     include './connect.php';
     $query = "SELECT * FROM categoria";
     $rescategoria = mysqli_query($conexion, $query);
+    $cuentacategoria = mysqli_num_rows($rescategoria);
+
     $query2 = "SELECT * FROM autor";
     $resautor = mysqli_query($conexion, $query2);
+    $cuentaautor = mysqli_num_rows($resautor);
+
     $query3 = "SELECT * FROM editorial";
     $reseditorial = mysqli_query($conexion, $query3);
+    $cuentaeditorial = mysqli_num_rows($reseditorial);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,10 +87,12 @@
                         <label class="control-label">Categoria <span style="color:red">*</span></label>
                         <select class="form-control" name="categoria" required>
                             <option disabled="disabled">Seleccionar una...</option>
-                            <?php while($categoria = mysqli_fetch_array($rescategoria))
-                                {
-                            ?>
-                            <option value="<?php echo $categoria['descripcion']?>"> <?php echo $categoria['descripcion']?> </option>
+                            <?php
+                            for($i=1; $i <= $cuentacategoria; $i++)
+                            {
+                                $contcategoria = mysqli_fetch_array($rescategoria)
+                                ?>
+                            <option value="<?php $contcategoria["descripcion"] ?>" <?php if ($row['categoria'] == $contcategoria['descripcion']){echo "selected";}?>> <?php echo $contcategoria['descripcion']?> </option>
                             <?php
                                 }
                             ?>
@@ -95,11 +102,12 @@
                         <label class="control-label">Autor <span style="color:red">*</span></label>
                         <select class="form-control" name="autor" required>
                             <option disabled="disabled">Seleccionar una...</option>
-                            <?php while($autor = mysqli_fetch_array($resautor))
-                            
-                                {
-                            ?>
-                            <option value="<?php echo $autor['desc_autor']?>"> <?php echo $autor['desc_autor']?> </option>
+                            <?php
+                            for($i=1; $i <= $cuentaautor; $i++)
+                            {
+                                $contautor = mysqli_fetch_array($resautor)
+                                ?>
+                            <option value="<?php $contautor["desc_autor"] ?>" <?php if ($row['autor'] == $contautor['desc_autor']){echo "selected";}?>> <?php echo $contautor['desc_autor']?> </option>
                             <?php
                                 }
                             ?>
@@ -109,11 +117,12 @@
                         <label class="control-label">Editorial <span style="color:red">*</span></label>
                         <select class="form-control" name="editorial" required>
                             <option disabled="disabled">Seleccionar una...</option>
-                            <?php while($editorial = mysqli_fetch_array($reseditorial))
-                            
-                                {
-                            ?>
-                            <option value="<?php echo $editorial['descripcion']?>"> <?php echo $editorial['descripcion']?> </option>
+                            <?php
+                            for($i=1; $i <= $cuentaeditorial; $i++)
+                            {
+                                $conteditorial = mysqli_fetch_array($reseditorial)
+                                ?>
+                            <option value="<?php $conteditorial["descripcion"] ?>" <?php if ($row['editorial'] == $conteditorial['descripcion']){echo "selected";}?>> <?php echo $conteditorial['descripcion']?> </option>
                             <?php
                                 }
                             ?>

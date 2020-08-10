@@ -1,7 +1,7 @@
 <?php
 	function lista_libro(){		
 		include('../connect.php');	
-		$sql="SELECT * FROM libro";
+		$sql="SELECT * FROM libro WHERE estado != 'I'";
 		return $result=$conexion->query($sql); 
 	}
    

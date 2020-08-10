@@ -61,7 +61,6 @@
                     <th>Titulo</th>
                     <th>Autor</th>
                     <th>Categoria</th>
-                    <th>Estado</th>
                     <th></th>
                 </tr>
             </thead>
@@ -75,7 +74,6 @@
                                 <td>".$row['titulo']."</td>
                                 <td>".$row['autor']."</td>
                                 <td>".$row['categoria']."</td>
-                                <td>".$row['estado']."</td>
                                 <td><a data-toggle='tooltip' title='Mas info' href='user_infobook.php?id=".base64_encode($row['idlibro'])."' class='btn btn-info'> <i class='icon ion-md-information-circle'></i> </a>
                         ";
                     }

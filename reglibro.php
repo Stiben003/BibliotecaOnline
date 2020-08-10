@@ -1,10 +1,10 @@
 <?php
     include './connect.php';
-    $query = "SELECT * FROM categoria";
+    $query = "SELECT * FROM categoria WHERE estado != 'I'";
     $result = mysqli_query($conexion, $query);
-    $query2 = "SELECT * FROM autor";
+    $query2 = "SELECT * FROM autor WHERE estado != 'I'";
     $result2 = mysqli_query($conexion, $query2);
-    $query3 = "SELECT * FROM editorial";
+    $query3 = "SELECT * FROM editorial WHERE estado != 'I'";
     $result3 = mysqli_query($conexion, $query3);
 ?>
 <!DOCTYPE html>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Año <span style="color:red">*</span></label>
-                        <input class="form-control" type="number" placeholder="Ingrese el Año de publicacion" name="year" min="1900" required />
+                        <input class="form-control" type="number" placeholder="Ingrese el Año de publicacion" name="year" min="1000" required />
                     </div>
                     <div class="form-group">
                         <label class="control-label">Categoria <span style="color:red">*</span></label>

@@ -63,7 +63,7 @@
     <div class="row d-flex flex-row justify-content-center align-items-center">
             <div class="form-group">
                 <a type="button" href="manage-books.php" class="btn btn-primary btn-lg">Atras</a>
-                <a type="button" href="data:application/pdf;base64,<?php echo base64_encode($row['pdflibro']); ?>" class="btn btn-secondary btn-lg" download="<?php echo $row['titulo']; ?>"> Descargar Libro</a>
+                <a type="button" href="download.php?archivo=<?php echo $row['pdflibro']; ?>&titulo=<?php echo $row['titulo']; ?>" class="btn btn-secondary btn-lg"> Descargar Libro</a>
               </div>
     </div>
 </div>

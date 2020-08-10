@@ -72,7 +72,11 @@ if ($i == 'INS'){
     $autor      =$_POST['autor'];
     $editorial  =$_POST['editorial'];
     $portada = addslashes(file_get_contents($_FILES['portada']['tmp_name']));
-    $archivo = addslashes(file_get_contents($_FILES['archivo']['tmp_name']));
+    $ruta = "../../libros"; 
+    $nombre = $_FILES['archivo']['name'];
+    $archivo= $ruta ."/". $nombre;
+    move_uploaded_file($_FILES['archivo']['tmp_name'], $archivo);
+                    
     $sql="
         INSERT INTO `libro`
         (
@@ -95,7 +99,7 @@ if ($i == 'INS'){
             '$categoria',
             '$editorial',
             '$portada',
-            '$archivo',
+            '$nombre',
             'A'
         ) 
     ";
@@ -105,6 +109,7 @@ if ($i == 'INS'){
     } else {
         $msj ='errorins';
     }
+
     
     header("Location: ../../manage-books.php?s=".$msj);
 }
