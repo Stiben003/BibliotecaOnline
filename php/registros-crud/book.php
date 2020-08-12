@@ -4,12 +4,13 @@ include('../../connect.php');
 // INS | UDT | DLT
 
 $i = '';
+$codigo= '';
 if (isset($_GET['accion'])) {
     $i = $_GET['accion'];
 }
 
 if (isset($_GET['id'])) {
-    $codigo = $_GET['id'];
+    $codigo = base64_decode($_GET['id']);
 }
 
 if ($i == 'DLT') {    
@@ -30,7 +31,7 @@ if ($i == 'DLT') {
 
 if ($i == 'UDT'){
     $msj='';
-    $titulo=$_POST['titulo'];
+    $titulo= $_POST['titulo'];
     $isbn=$_POST['isbn'];
     $descripcion=$_POST['descripcion'];
     $year=$_POST['year'];
@@ -38,8 +39,9 @@ if ($i == 'UDT'){
     $autor=$_POST['autor'];
     $editorial=$_POST['editorial'];
     $estado= $_POST['estado'];
+    $codigo = $_POST['codigo'];
     $sql="
-    UPDATE libro 
+    UPDATE `libro`
     SET 
     
     `titulo` ='$titulo',

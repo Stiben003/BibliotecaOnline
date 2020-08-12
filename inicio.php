@@ -47,7 +47,14 @@
     $row = mysqli_fetch_array($selectUsuario);    
     $selectLibro=$conexion->query("SELECT COUNT(idlibro) FROM `libro`;"); 
     $row1 = mysqli_fetch_array($selectLibro);   
-
+    $Selectcategoria=$conexion->query("SELECT COUNT(idcategoria) FROM `categoria`;"); 
+    $row2 = mysqli_fetch_array($Selectcategoria);
+    $Selectautor=$conexion->query("SELECT COUNT(idautor) FROM `autor`;"); 
+    $row3 = mysqli_fetch_array($Selectautor);
+    $Selecteditoriales=$conexion->query("SELECT COUNT(ideditorial) FROM `editorial`;"); 
+    $row4= mysqli_fetch_array($Selecteditoriales);   
+    $Selectdescarga=$conexion->query("SELECT COUNT(iddescarga) FROM `descarga`;"); 
+    $row5 = mysqli_fetch_array($Selectdescarga);      
     
 ?>
 <section class="py-3">
@@ -70,7 +77,38 @@
                                 <h2 class="font-weight-bold"><?php echo $row1[0]; ?></h2>
                                 <h6 class="text-success">Registrados</h6>
                             </div>
-                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 d-flex my-3">
+                            <div class="mx-auto">
+                                <h5 class="text-muted">Categorias</h5>
+                                <h2 class="font-weight-bold"><?php echo $row2[0]; ?></h2>
+                                <h6 class="text-success">Registrados</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 d-flex my-3">
+                            <div class="mx-auto">
+                                <h5 class="text-muted">Autores</h5>
+                                <h2 class="font-weight-bold"><?php echo $row3[0]; ?></h2>
+                                <h6 class="text-success">Registrados</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row d-flex flex-row justify-content-center align-items-center">
+                        <div class="col-lg-3 col-md-6 d-flex my-3">
+                            <div class="mx-auto">
+                                <h5 class="text-muted">Editoriales</h5>
+                                <h2 class="font-weight-bold"><?php echo $row4[0]; ?></h2>
+                                <h6 class="text-success">Registrados</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 d-flex my-3">
+                            <div class="mx-auto">
+                                <h5 class="text-muted">Descargas</h5>
+                                <h2 class="font-weight-bold"><?php echo $row5[0]; ?></h2>
+                                <h6 class="text-success">Registrados</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

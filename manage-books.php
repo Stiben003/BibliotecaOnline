@@ -119,7 +119,7 @@
                                 <td>".$row['estado']."</td>
                                 <td><a data-toggle='tooltip' title='Mas info' href='more_bookinfo.php?id=".base64_encode($row['idlibro'])."' class='btn btn-info'> <i class='icon ion-md-information-circle'></i> </a>
                                 <a data-toggle='tooltip' title='Editar' href='update_book.php?id=".base64_encode($row['idlibro'])."' class='btn btn-primary'> <i class='icon ion-md-create'></i> </a> 
-                                <a data-toggle='tooltip' title='Anular' href='php/registros-crud/book.php?accion=DLT&id=".$row['idlibro']."' class='btn btn-danger'> <i class='icon ion-md-trash'></i> </a></td>
+                                <a data-toggle='tooltip' title='Anular' href='php/registros-crud/book.php?accion=DLT&id=".base64_encode($row['idlibro'])."' class='btn btn-danger'> <i class='icon ion-md-trash'></i> </a></td>
                         ";
                     }
                 ?>

@@ -1,3 +1,25 @@
+<?php
+  session_start();
+    include 'connect.php';
+    if (isset($_POST['descargar'])) {
+      if($_SESSION['rol'] !=1){
+        $time = date("d/m/yy H:i:s");
+        $usuario = $_SESSION['nuser'];
+
+        $sql= " INSERT INTO `descarga`(`nombreusuario`,`FDescarga`) VALUES ('$usuario','$time')";
+
+    if ($conexion->query($sql)) {
+        $msj ='successins';
+    } else {
+        $msj ='errorins';
+    }
+
+    
+    header("Location: ../../manage-books.php?s=".$msj);
+
+    }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,10 +85,11 @@
     <div class="row d-flex flex-row justify-content-center align-items-center">
             <div class="form-group">
                 <a type="button" href="manage-books.php" class="btn btn-primary btn-lg">Atras</a>
-                <a type="button" href="download.php?archivo=<?php echo $row['pdflibro']; ?>&titulo=<?php echo $row['titulo']; ?>" class="btn btn-secondary btn-lg"> Descargar Libro</a>
+                <a type="submit" name="descargar" href="download.php?archivo=<?php echo $row['pdflibro']; ?>&titulo=<?php echo $row['titulo']; ?>" class="btn btn-secondary btn-lg"> Descargar Libro</a>
               </div>
     </div>
 </div>
+
 
 <?php include "footer.php";?>
                       

@@ -1,3 +1,7 @@
+<?php
+session_start();
+include '../connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -62,12 +66,28 @@
     <div class="row d-flex flex-row justify-content-center align-items-center">
             <div class="form-group">
                 <a type="button" href="catalogo.php" class="btn btn-primary btn-lg">Atras</a>
-                <a type="button" href="data:application/pdf;base64,<?php echo base64_encode($row['pdflibro']); ?>" class="btn btn-secondary btn-lg" download="<?php echo $row['titulo']; ?>"> Descargar Libro</a>
+                <a type="submit" name="descargar" onclick="fecha()" id="descargar" href="../download.php?archivo=<?php echo $row['pdflibro']; ?>&titulo=<?php echo $row['titulo']; ?>" class="btn btn-secondary btn-lg"> Descargar Libro</a>
               </div>
     </div>
 </div>
+<script>
+    function fecha(){
+      <?php 
+          $usuario= $_SESSION['nuser'];
+          $time = date("d/m/yy H:i:s");
+          $libro = $row['titulo'];
+          $sql = "INSERT INTO descarga (usuario, libro, FDescarga) VALUES ('$usuario', '$libro', '$time')";
+          $result3 = mysqli_query($conexion, $sql);
+          echo $result3;
+        ?>
+    }
+</script>
 
-<?php include "footer.php";?>
-                      
+
+<?php 
+
+include "footer.php";
+
+?>
 </body>
 </html>

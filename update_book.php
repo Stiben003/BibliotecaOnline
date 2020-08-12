@@ -51,10 +51,10 @@
         <div class="title-flat-form title-flat-blue">Actualizar Libro</div>
         <div class="panel panel-default">
             <div class="container">
-                <form action="php/registros-crud/book.php?accion=UDT" method="post" enctype="multipart/form-data">
+                <form action="php/registros-crud/book.php?accion=UDT" method="POST">
                     <div class="form-group">
                         <label class="control-label">Código <span style="color:red">*</span></label>
-                        <input type="text" name="codigo" id="codigo" require="" readonly="" class="form-control" value="<?php echo $row['idlibro'] ?>">
+                        <input type="text" name="codigo" id="codigo" require readonly="" class="form-control" value="<?php echo $row['idlibro'] ?>">
                     </div>
                     <div class="form-group">
                         <label class="control-label">Titulo <span style="color:red">*</span></label>
@@ -85,14 +85,15 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Categoria <span style="color:red">*</span></label>
-                        <select class="form-control" name="categoria" required>
+                        <select class="form-control" name="categoria" id="categoria" required>
                             <option disabled="disabled">Seleccionar una...</option>
+                            <option value="123">Selsdsda...</option>
                             <?php
                             for($i=1; $i <= $cuentacategoria; $i++)
                             {
                                 $contcategoria = mysqli_fetch_array($rescategoria)
                                 ?>
-                            <option value="<?php $contcategoria["descripcion"] ?>" <?php if ($row['categoria'] == $contcategoria['descripcion']){echo "selected";}?>> <?php echo $contcategoria['descripcion']?> </option>
+                            <option value="<?php echo $contcategoria['descripcion'] ?>" <?php if ($row['categoria'] == $contcategoria['descripcion']){echo "selected";}?>> <?php echo $contcategoria['descripcion']?> </option>
                             <?php
                                 }
                             ?>
@@ -100,14 +101,14 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Autor <span style="color:red">*</span></label>
-                        <select class="form-control" name="autor" required>
+                        <select class="form-control" name="autor" id="autor" required>
                             <option disabled="disabled">Seleccionar una...</option>
                             <?php
                             for($i=1; $i <= $cuentaautor; $i++)
                             {
                                 $contautor = mysqli_fetch_array($resautor)
                                 ?>
-                            <option value="<?php $contautor["desc_autor"] ?>" <?php if ($row['autor'] == $contautor['desc_autor']){echo "selected";}?>> <?php echo $contautor['desc_autor']?> </option>
+                            <option value="<?php echo $contautor["desc_autor"] ?>" <?php if ($row['autor'] == $contautor['desc_autor']){echo "selected";}?>> <?php echo $contautor['desc_autor']?> </option>
                             <?php
                                 }
                             ?>
@@ -122,7 +123,7 @@
                             {
                                 $conteditorial = mysqli_fetch_array($reseditorial)
                                 ?>
-                            <option value="<?php $conteditorial["descripcion"] ?>" <?php if ($row['editorial'] == $conteditorial['descripcion']){echo "selected";}?>> <?php echo $conteditorial['descripcion']?> </option>
+                            <option value="<?php echo $conteditorial["descripcion"] ?>" <?php if ($row['editorial'] == $conteditorial['descripcion']){echo "selected";}?>> <?php echo $conteditorial['descripcion']?> </option>
                             <?php
                                 }
                             ?>

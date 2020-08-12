@@ -44,6 +44,7 @@
             
             
         }
+
         
         if ($error == ''){
             $statement = $conexion->prepare('INSERT INTO login (id, correo, usuario, clave, rol_id) VALUES (null, :correo, :usuario, :clave, :rol)');
@@ -56,6 +57,7 @@
             ));
             
             $error .= '<i style="color: green;">Usuario registrado exitosamente</i>';
+            location: "./index.php";
         }
     }
 
