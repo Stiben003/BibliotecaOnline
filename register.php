@@ -12,6 +12,7 @@
         $usuario = $_POST['usuario'];
         $clave = $_POST['clave'];
         $clave2 = $_POST['clave2'];
+        $rol_id = 2;
         
         $clave = hash('sha512', $clave);
         $clave2 = hash('sha512', $clave2);
@@ -23,11 +24,11 @@
             $error .= '<i>Favor de rellenar todos los campos</i>';
         }else{
             try{
-                $conexion = new PDO('mysql:host=localhost;dbname=login_tuto', 'root', '');
-            }catch(PDOException $prueba_error){
-                echo "Error: " . $prueba_error->getMessage();
-            }
-            
+                $conexion = new PDO('mysql:host=localhost;dbname=project', 'root', '');
+           }catch(PDOException $prueba_error){
+               echo "Error: " . $prueba_error->getMessage();
+           }
+       
             $statement = $conexion->prepare('SELECT * FROM login WHERE usuario = :usuario LIMIT 1');
             $statement->execute(array(':usuario' => $usuario));
             $resultado = $statement->fetch();
@@ -43,18 +44,20 @@
             
             
         }
+
         
         if ($error == ''){
-            $statement = $conexion->prepare('INSERT INTO login (id, correo, usuario, clave) VALUES (null, :correo, :usuario, :clave)');
+            $statement = $conexion->prepare('INSERT INTO login (id, correo, usuario, clave, rol_id) VALUES (null, :correo, :usuario, :clave, :rol)');
             $statement->execute(array(
                 
                 ':correo' => $correo,
                 ':usuario' => $usuario,
-                ':clave' => $clave
-                
+                ':clave' => $clave,
+                'rol' => $rol_id
             ));
             
             $error .= '<i style="color: green;">Usuario registrado exitosamente</i>';
+            location: "./index.php";
         }
     }
 

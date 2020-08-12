@@ -17,10 +17,10 @@
         <div class="header">
             <div class="logo-title">
                 <img src="image/logo2.png" alt="">
-                <h2>Biblioteca Online</h2>
+                <h2>Biblioteca</h2>
             </div>
             <div class="menu">
-                <a href="login.php"><li class="module-login">Login</li></a>
+                <a href="index.php"><li class="module-login">Login</li></a>
                 <a href="register.php"><li class="module-register active">Register</li></a>
             </div>
         </div>

@@ -23,6 +23,8 @@ body {
   transform: translate(-50%, -50%);
   padding-bottom: 50px;
   overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .header {
@@ -37,7 +39,7 @@ body {
 .logo-title {
   display: flex;
   margin-top: 8px;
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 .logo-title img {
@@ -46,7 +48,7 @@ body {
 }
 
 .logo-title h2 {
-  margin-left: 10px;
+  margin-left: 2px;
   margin-top: 8px;
   color: white;
   font-weight: 300;
@@ -58,13 +60,15 @@ body {
   right: 0px;
   top: 0px;
   color: white;
+  margin-top: 2px;
+  margin-right: 2px;
 }
 
 .menu li {
   list-style: none;
-  padding: 30px;
+  padding: 15px;
   padding-bottom: 27px;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 .line-li {
@@ -175,35 +179,4 @@ a {
 
 .active {
   border-bottom: 4px solid #5584ff;
-}
-
-/*Principal*/
-
-.welcome {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  margin-top: 100px;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  padding: 20px;
-}
-
-.welcome h1 {
-  font-size: 50px;
-  color: white;
-  font-weight: 100;
-}
-
-.welcome a {
-  display: block;
-  margin-top: 40px;
-  font-size: 20px;
-  padding: 10px;
-  border: 1px solid white;
-}
-
-.welcome a:hover {
-  color: black;
-  background: white;
 }
