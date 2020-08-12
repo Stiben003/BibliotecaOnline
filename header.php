@@ -7,7 +7,7 @@
 
         <ul class="list-unstyled components">
           <li class="nav-item">
-            <a href="inicio.php" class="nav-link d-block text-white p-3 border-0"
+            <a href="inicio.php" class="nav-link d-block text-white pb-3 border-0"
               ><i class="icon ion-md-home lead mr-2"></i> Inicio</a
             >
           </li>
@@ -16,17 +16,17 @@
               href="#catalogo"
               data-toggle="collapse"
               aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
+              class="dropdown-toggle nav-link d-block text-white pb-3 border-0"
               >Libros y Catalogo</a
             >
             <ul class="collapse list-unstyled" id="catalogo">
               <li class="nav-item">
-                <a href="manage-books.php" class="nav-link d-block text-white p-3 border-0"
+                <a href="manage-books.php" class="nav-link d-block text-white pb-3 border-0"
                   ><i class="icon ion-md-book lead mr-2"></i> Listado de Libros</a
                 >
               </li>
               <li class="nav-item">
-                <a href="reglibro.php" class="nav-link d-block text-white p-3 border-0"
+                <a href="reglibro.php" class="nav-link d-block text-white pb-3 border-0"
                   ><i class="icon ion-md-book lead mr-2"></i>Agregar Libros</a
                 >
               </li>
@@ -37,23 +37,23 @@
               href="#categoria"
               data-toggle="collapse"
               aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
+              class="dropdown-toggle nav-link d-block text-white pb-3 border-0"
               >Administrar</a
             >
             <ul class="collapse list-unstyled" id="categoria">
               <li class="nav-item">
-                <a href="manage-categories.php" class="nav-link d-block text-white p-3 border-0">
+                <a href="manage-categories.php" class="nav-link d-block text-white pb-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Administrar categorias</a
                 >
               </li>
               
               <li class="nav-item">
-                <a href="manage-authors.php" class="nav-link d-block text-white p-3 border-0">
+                <a href="manage-authors.php" class="nav-link d-block text-white pb-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Administrar autores</a
                 >
               </li>
               <li class="nav-item">
-                <a href="manage-editorials.php" class="nav-link d-block text-white p-3 border-0">
+                <a href="manage-editorials.php" class="nav-link d-block text-white pb-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Administrar editoriales</a
                 >
               </li>
@@ -64,22 +64,22 @@
               href="#autor"
               data-toggle="collapse"
               aria-expanded="false"
-              class="dropdown-toggle nav-link d-block text-white p-3 border-0"
+              class="dropdown-toggle nav-link d-block text-white pb-3 border-0"
               >Registros</a
             >
             <ul class="collapse list-unstyled" id="autor">
               <li class="nav-item">
-                <a href="addcategory.php" class="nav-link d-block text-white p-3 border-0">
+                <a href="addcategory.php" class="nav-link d-block text-white pb-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Agregar categoria</a
                 >
               </li>
               <li class="nav-item">
-                <a href="addauthor.php" class="nav-link d-block text-white p-3 border-0">
+                <a href="addauthor.php" class="nav-link d-block text-white pb-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Agregar autor</a
                 >
               </li>
               <li class="nav-item">
-                <a href="addeditorial.php" class="nav-link d-block text-white p-3 border-0">
+                <a href="addeditorial.php" class="nav-link d-block text-white pb-3 border-0">
                   <i class="icon ion-md-create lead mr-2"></i> Agregar editorial</a
                 >
               </li>
@@ -87,9 +87,31 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link d-block text-white p-3 border-0">
-              <i class="icon ion-md-settings lead mr-2"></i> Reportes</a
+            <a
+              href="#reporte"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle nav-link d-block text-white pb-3 border-0"
+              >Reportes</a
             >
+            <ul class="collapse list-unstyled" id="reporte">
+              <li class="nav-item">
+                <a href="./reportes/reportes-usuarios.php" class="nav-link d-block text-white pb-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Usuarios</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./reportes/reportes-descargas.php" class="nav-link d-block text-white pb-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Descargas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="./reportes/reportes-libro.php" class="nav-link d-block text-white pb-3 border-0">
+                  <i class="icon ion-md-create lead mr-2"></i> Libros</a
+                >
+              </li>
+              
+            </ul>
           </li>
         </ul>
       </nav>

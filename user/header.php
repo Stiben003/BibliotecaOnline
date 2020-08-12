@@ -13,7 +13,7 @@
           </li>
           <li class="nav-item">
             <a href="catalogo.php" class="nav-link d-block text-white p-3 border-0"
-              ><i class="icon ion-md-home lead mr-2"></i> Catalogo</a
+              ><i class="icon ion-md-bookmarks"></i> Catalogo</a
             >
           </li>
           

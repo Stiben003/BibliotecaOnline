@@ -49,113 +49,39 @@
           </h1>
 
           <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="col-lg-6 col-sm-6 mb-4">
               <div class="card h-100">
-                <a href="catalogo.php"
+                <a href="http://www.konradlorenz.edu.co/es/estudiantes/servicios-para-estudiantes/biblioteca-juan-alberto-aragon-bateman/novedades/714-los-beneficios-de-la-lectura.html"
                   ><img class="card-img-top" src="../image/book.jpg" alt=""
                 /></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="catalogo.php">Los beneficios de la lectura</a>
+                    <a href="http://www.konradlorenz.edu.co/es/estudiantes/servicios-para-estudiantes/biblioteca-juan-alberto-aragon-bateman/novedades/714-los-beneficios-de-la-lectura.html">Los beneficios de la lectura</a>
                   </h4>
                   <p class="card-text">
-                    LVoluptatibus sit, repellat sequi itaque deserunt, dolores
-                    in, nesciunt, illum tempora ex quae? Nihil, dolorem!
+                  "Leer es para la mente lo que el ejercicio físico es para el cuerpo". Esta frase de Joseph Addison, ensayista, poeta y guinista inglés (1672 - 1719) representa muy bien los beneficios de leer. ¿Sabía usted que al leer, no solo incrementa notoriamente la concentración, enriquece su vocabulario y previene el declive cognitivo?
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="col-lg-6 col-sm-6 mb-4">
               <div class="card h-100">
-                <a href="#"
+                <a href="https://oferplan.abc.es/blog/eventos/dia-del-libro-2020/?ref=https%3A%2F%2Fwww.google.com%2F"
                   ><img
                     class="card-img-top"
-                    src="http://placehold.it/700x400"
+                    src="../image/images.jpg"
                     alt=""
                 /></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Project Two</a>
+                    <a href="https://oferplan.abc.es/blog/eventos/dia-del-libro-2020/?ref=https%3A%2F%2Fwww.google.com%2F">Recomendaciones de Libros</a>
                   </h4>
-                  <p class="card-text">itae.</p>
+                  <p class="card-text">Parece que este año vamos a disfrutar del día del libro, el próximo jueves 23 de abril, de una manera diferente. Ya no vamos a visitar los puestos de libros en la calles o a acudir a alguna firma de libros. Pero, no hay mal que por bien no venga, al estar en casa tenemos más tiempo para leer. Por eso te dejamos una selección de los mejores libros de adulto recomendados para este día. </p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Three</a>
-                  </h4>
-                  <p class="card-text">
-                    umque, odio distinctio velit nostrum temporibus
-                    necessitatibus et facere atque iure perspiciatis mollitia
-                    recusandae vero vel quam!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Four</a>
-                  </h4>
-                  <p class="card-text">
-                    euismod odio, gravida pellentesque urna varius vitae.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Five</a>
-                  </h4>
-                  <p class="card-text">
-                    iverra euismod odio, gravida pellentesque urna varius vitae.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <a href="#"
-                  ><img
-                    class="card-img-top"
-                    src="http://placehold.it/700x400"
-                    alt=""
-                /></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Project Six</a>
-                  </h4>
-                  <p class="card-text">
-                    perferendis rem illo, voluptate atque, sit eius in
-                    voluptates, nemo repellat fugiat excepturi! Nemo, esse.
-                  </p>
-                </div>
-              </div>
-            </div>
+
+
           </div>
           <!-- /.row -->
         </div>

@@ -1,4 +1,15 @@
-<?php include "php/consultas.php";?>
+<?php
+    session_start();
+
+    if (!isset($_SESSION['rol'])) {
+        header('location: index.php');
+    }else{
+        if($_SESSION['rol'] !=1){
+            header('location: index.php');
+        }
+    }
+
+include "php/consultas.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

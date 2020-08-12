@@ -1,21 +1,21 @@
 <?php
-require('fpdf/fpdf.php');
+require('./fpdf/fpdf.php');
 require('../connect.php');
 
 class PDF extends FPDF
 {
 function Header()
 {
-    $this->Image('../image/logo2.png',8,8,25);
+    $this->Image('../image/logo2.png',8,3,25);
 
     $this->SetFont('Arial','B',15);
     $this->Cell(40);
-    $this->Cell(120,10,'Reporte Registros de Usuarios',1,0,'C');
+    $this->Cell(105,15,'Reporte Registros de Usuarios',1,0,'C');
     $this->Ln(20);
 
-    $this->Cell(20, 10,'id', 1, 0, 'C', 0);
-    $this->Cell(40, 10,'Correo', 1, 0, 'C', 0);
-    $this->Cell(40, 10,'Usuario', 1, 1, 'C', 0);
+    $this->Cell(30, 10,'id', 1, 0, 'C', 0);
+    $this->Cell(80, 10,'Correo', 1, 0, 'C', 0);
+    $this->Cell(70, 10,'Usuario', 1, 1, 'C', 0);
 }
 function Footer()
 {
@@ -35,9 +35,9 @@ $fpdf->Addpage();
 $fpdf->SetFont('Arial','', 12);
 
 while($row = $resultado->fetch_assoc()){
-$fpdf->Cell(20, 10, $row['id'], 1, 0, 'C', 0);
-$fpdf->Cell(40, 10, $row['correo'], 1, 0, 'C', 0);
-$fpdf->Cell(40, 10, $row['usuario'],1, 1, 'C');
+$fpdf->Cell(30, 10, $row['id'], 1, 0, 'C', 0);
+$fpdf->Cell(80, 10, $row['correo'], 1, 0, 'C', 0);
+$fpdf->Cell(70, 10, $row['usuario'],1, 1, 'C');
 }
 
 $fpdf->Output();

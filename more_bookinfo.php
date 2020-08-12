@@ -1,6 +1,15 @@
 <?php
-  session_start();
+    session_start();
     include 'connect.php';
+    if (!isset($_SESSION['rol'])) {
+        header('location: index.php');
+    }else{
+        if($_SESSION['rol'] !=1){
+            header('location: index.php');
+        }
+    }
+
+    
     if (isset($_POST['descargar'])) {
       if($_SESSION['rol'] !=1){
         $time = date("d/m/yy H:i:s");
@@ -85,7 +94,7 @@
     <div class="row d-flex flex-row justify-content-center align-items-center">
             <div class="form-group">
                 <a type="button" href="manage-books.php" class="btn btn-primary btn-lg">Atras</a>
-                <a type="submit" name="descargar" href="download.php?archivo=<?php echo $row['pdflibro']; ?>&titulo=<?php echo $row['titulo']; ?>" class="btn btn-secondary btn-lg"> Descargar Libro</a>
+                <a type="submit" name="descargar" href="./php/download.php?archivo=<?php echo $row['pdflibro']; ?>&titulo=<?php echo $row['titulo']; ?>" class="btn btn-secondary btn-lg"> Descargar Libro</a>
               </div>
     </div>
 </div>

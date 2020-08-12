@@ -1,4 +1,14 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION['rol'])) {
+        header('location: index.php');
+    }else{
+        if($_SESSION['rol'] !=1){
+            header('location: index.php');
+        }
+    }
+
     include './connect.php';
     $query = "SELECT * FROM categoria";
     $rescategoria = mysqli_query($conexion, $query);
@@ -51,7 +61,7 @@
         <div class="title-flat-form title-flat-blue">Actualizar Libro</div>
         <div class="panel panel-default">
             <div class="container">
-                <form action="php/registros-crud/book.php?accion=UDT" method="POST">
+                <form action="php/registros-crud/book.php?accion=UDT" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="control-label">Código <span style="color:red">*</span></label>
                         <input type="text" name="codigo" id="codigo" require readonly="" class="form-control" value="<?php echo $row['idlibro'] ?>">
@@ -87,7 +97,6 @@
                         <label class="control-label">Categoria <span style="color:red">*</span></label>
                         <select class="form-control" name="categoria" id="categoria" required>
                             <option disabled="disabled">Seleccionar una...</option>
-                            <option value="123">Selsdsda...</option>
                             <?php
                             for($i=1; $i <= $cuentacategoria; $i++)
                             {
@@ -128,6 +137,16 @@
                                 }
                             ?>
                         </select>
+                    </div>
+                    <div class="row mx-2">
+                            <div class="form-group">
+                                <label for="portada">Portada</label>
+                                <input type="file" name="portada" class="form-control-file" id="portada" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label for="archpdf">Archivo PDF</label>
+                                <input type="file" name="archivo" class="form-control-file" accept="application/pdf">
+                            </div>
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-lg-6 col-offset-2 col-xs-12 col-xs-offset-0">

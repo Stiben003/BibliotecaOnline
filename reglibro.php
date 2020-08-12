@@ -1,4 +1,14 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION['rol'])) {
+        header('location: index.php');
+    }else{
+        if($_SESSION['rol'] !=1){
+            header('location: index.php');
+        }
+    }
+
     include './connect.php';
     $query = "SELECT * FROM categoria WHERE estado != 'I'";
     $result = mysqli_query($conexion, $query);
@@ -60,7 +70,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Año <span style="color:red">*</span></label>
-                        <input class="form-control" type="number" placeholder="Ingrese el Año de publicacion" name="year" min="1000" required />
+                        <input class="form-control" type="number" placeholder="Ingrese el Año de publicacion" name="year" min="1000" max="2020" required />
                     </div>
                     <div class="form-group">
                         <label class="control-label">Categoria <span style="color:red">*</span></label>

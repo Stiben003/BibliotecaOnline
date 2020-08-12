@@ -39,21 +39,44 @@ if ($i == 'UDT'){
     $autor=$_POST['autor'];
     $editorial=$_POST['editorial'];
     $estado= $_POST['estado'];
+    $portada = addslashes(file_get_contents($_FILES['portada']['tmp_name']));
+    $ruta = "../../libros"; 
+    $nombre = $_FILES['archivo']['name'];
+    $archivo= $ruta ."/". $nombre;
+    move_uploaded_file($_FILES['archivo']['tmp_name'], $archivo);
     $codigo = $_POST['codigo'];
-    $sql="
-    UPDATE `libro`
-    SET 
+    if ($portada == '' && $nombre == '') {
+        $sql="
+        UPDATE `libro`
+        SET 
+        
+        `titulo` ='$titulo',
+        `isbn` ='$isbn',
+        `descripcion` ='$descripcion',
+        `year` ='$year',
+        `autor` ='$autor',
+        `categoria`='$categoria',
+        `estado` ='$estado'
+        WHERE idlibro = '$codigo'
+        ";
     
-    `titulo` ='$titulo',
-    `isbn` ='$isbn',
-    `descripcion` ='$descripcion',
-    `year` ='$year',
-    `autor` ='$autor',
-    `categoria`='$categoria',
-    `editorial` ='$editorial',
-    `estado` ='$estado'
-    WHERE idlibro = '$codigo'
-    ";
+    }else{
+        $sql="
+        UPDATE `libro`
+        SET 
+        
+        `titulo` ='$titulo',
+        `isbn` ='$isbn',
+        `descripcion` ='$descripcion',
+        `year` ='$year',
+        `autor` ='$autor',
+        `categoria`='$categoria',
+        `portada` ='$portada',
+        `pdflibro` ='$nombre',
+        `estado` ='$estado'
+        WHERE idlibro = '$codigo'
+        ";
+    }
 
     if ($conexion->query($sql)) {
         $msj ='successudt';
